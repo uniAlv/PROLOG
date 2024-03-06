@@ -28,3 +28,10 @@ asiste(jose,'inteligencia artificial').
 asiste(karina,'redes i').
 asiste(karina,'inteligencia artificial').
 asiste(mariel,'inteligencia artificial').
+
+#1er paso Identificar las condiciones
+#2do paso Identificar si es AND y OR
+#3do Escribir Condiciones en prolog
+
+esDocenteDe(Docente,Estudiante):-ensena(Docente,Materia),asiste(Estudiante,Materia).
+esCompaneroDe(EstudianteA,EstudianteB):-asiste(EstudianteA,Materia),asiste(EstudianteB,Materia).
