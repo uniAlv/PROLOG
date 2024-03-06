@@ -1,4 +1,5 @@
-#atomo
+%atomo
+
 juan.
 mario.
 estela.
@@ -10,14 +11,18 @@ andres.
 jose.
 karina.
 mariel.
-#enseña
+
+%enseña
+
 ensena(juan,'base de datos ii').
 ensena(estela,'redes i').
 ensena(estela,'inteligencia artificial').
 ensena(maria,'base de datos ii').
 ensena(maria,'redes i').
 ensena(maria,'inteligencia artificial').
-#asiste
+
+%asiste
+
 asiste(arturo,'redes i').
 asiste(arturo,'base de datos ii').
 asiste(andres,'redes i').
@@ -29,9 +34,9 @@ asiste(karina,'redes i').
 asiste(karina,'inteligencia artificial').
 asiste(mariel,'inteligencia artificial').
 
-#1er paso Identificar las condiciones
-#2do paso Identificar si es AND y OR
-#3do Escribir Condiciones en prolog
+%1er paso Identificar las condiciones
+%2do paso Identificar si es AND y OR
+%3do Escribir Condiciones en prolog
 
 esDocenteDe(Docente,Estudiante):-ensena(Docente,Materia),asiste(Estudiante,Materia).
 esCompaneroDe(EstudianteA,EstudianteB):-asiste(EstudianteA,Materia),asiste(EstudianteB,Materia).
