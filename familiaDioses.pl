@@ -71,7 +71,36 @@ esHijo(baco,hefesto).
 esHijo(hermes,atena).
 
 %hija
+esHija(hera,cronos).
+esHija(afrodita,hera).
+esHija(afrodita,ares).
+esHija(atena,hefesto).
+esHija(nera,zeus).
+esHija(nera,hipolita).
+
 %hermano
+esHermano(hefesto,afrodita).
+esHermano(baco, atena).
+esHermano(zeus,baco).
+esHermano(baco,zeus).
+
 %hermana
+esHermana(afrodita,hefesto).
+esHermana(atena,baco).
+esHermana(atena,zeus).
+
 %abuelo
+esAbuelo(cronos,hefesto).
+esAbuelo(cronos,afrodita).
+esAbuelo(ares,atena).
+esAbuelo(ares,baco).
+esAbuelo(ares,zeus).
+esAbuelo(poseidon,nera).
+esAbuelo(hefesto,hermes).
+
 %abuela
+esAbuela(hera, atena).
+esAbuela(hera, baco).
+esAbuela(hera, zeus).
+esAbuela(afrodita, zeus).
+esAbuela(afrodita, hermes).
