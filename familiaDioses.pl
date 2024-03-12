@@ -104,3 +104,5 @@ esAbuela(hera, baco).
 esAbuela(hera, zeus).
 esAbuela(afrodita, zeus).
 esAbuela(afrodita, hermes).
+
+%meOlvideUsarReglassss ;-;
