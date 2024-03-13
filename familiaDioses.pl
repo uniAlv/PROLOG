@@ -116,5 +116,5 @@ esAbuela(afrodita, hermes).
 %meOlvideUsarReglassss ;-;
 
 %esAcenstro
-esAcenstro(Acenstro,Persona):-esDecendienteDirecto(Acenstro,Persona),esHombre(Acenstro);esDecendienteDirecto(Acenstro,Persona),esMujer(Acenstro).
-esAcenstro(Acenstro,Persona):-esDecendienteDirecto(Acenstro,Persona),esHombre(Acenstro), esAcenstro(Acenstro,Padre);esDecendienteDirecto(Acenstro,Persona),esMujer(Acenstro), esAcenstro(Acenstro,Padre).
+esAcenstro(Acenstro,Persona):-esDecendienteDirecto(Persona,Acenstro),esHombre(Acenstro);esDecendienteDirecto(Persona,Acenstro),esMujer(Acenstro).
+esAcenstro(Acenstro,Persona):-esDecendienteDirecto(Persona,Padre),esHombre(Acenstro), esAcenstro(Acenstro,Padre).
