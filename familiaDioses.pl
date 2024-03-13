@@ -83,7 +83,7 @@ esHija(nera,zeus).
 esHija(nera,hipolita).
 
 %hermano
-hermanoRegla(HermanoA,HermanoB):-esDecendienteDirecto(HermanoA,Padre),esHombre(Hermano).
+hermanoRegla(HermanoA,HermanoB):-esDecendienteDirecto(HermanoA,Padre),esHombre(HermanoA),HermanoA \==HermanaA.
 esHermano(hefesto,afrodita).
 esHermano(baco, atena).
 esHermano(zeus,baco).
@@ -114,3 +114,7 @@ esAbuela(afrodita, zeus).
 esAbuela(afrodita, hermes).
 
 %meOlvideUsarReglassss ;-;
+
+%esAcenstro
+esAcenstro(Acenstro,Persona):-esDecendienteDirecto(Acenstro,Persona)
+esAcenstro(Acenstro,Persona):-esDecendienteDirecto(Acenstro,Persona),esAcenstro(Acenstro,Padre)
