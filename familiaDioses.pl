@@ -83,7 +83,7 @@ esHija(nera,zeus).
 esHija(nera,hipolita).
 
 %hermano
-hermanoRegla(HermanoA,HermanoB):-esDecendienteDirecto(HermanoA,Padre),esHombre(HermanoA),HermanoA \==HermanaA.
+hermanoRegla(HermanoA,HermanoB):-esDecendienteDirecto(HermanoA,Padre),esHombre(HermanoA).
 esHermano(hefesto,afrodita).
 esHermano(baco, atena).
 esHermano(zeus,baco).
@@ -96,7 +96,7 @@ esHermana(atena,baco).
 esHermana(atena,zeus).
 
 %abuelo
-abueloRegla(Abuelo,Nieto):-esDecendienteDirecto(Nieto,Padre),esDecendienteDirecto(Padre,Abuelo),esHombre(Abuelo)
+abueloRegla(Abuelo,Nieto):-esDecendienteDirecto(Nieto,Padre),esDecendienteDirecto(Padre,Abuelo),esHombre(Abuelo).
 esAbuelo(cronos,hefesto).
 esAbuelo(cronos,afrodita).
 esAbuelo(ares,atena).
@@ -106,7 +106,7 @@ esAbuelo(poseidon,nera).
 esAbuelo(hefesto,hermes).
 
 %abuela
-abuelaRegla(Abuela,Nieto):-esDecendienteDirecto(Nieto,Padre),esDecendienteDirecto(Padre,Abuela),esHombre(Abuela)
+abuelaRegla(Abuela,Nieto):-esDecendienteDirecto(Nieto,Padre),esDecendienteDirecto(Padre,Abuela),esHombre(Abuela).
 esAbuela(hera, atena).
 esAbuela(hera, baco).
 esAbuela(hera, zeus).
@@ -116,5 +116,5 @@ esAbuela(afrodita, hermes).
 %meOlvideUsarReglassss ;-;
 
 %esAcenstro
-esAcenstro(Acenstro,Persona):-esDecendienteDirecto(Acenstro,Persona),esHombre(Acenstro);esDecendienteDirecto(Acenstro,Persona),esMujer(Acenstro)
-esAcenstro(Acenstro,Persona):-esDecendienteDirecto(Acenstro,Persona),esHombre(Acenstro), esAcenstro(Acenstro,Padre);esDecendienteDirecto(Acenstro,Persona),esMujer(Acenstro), esAcenstro(Acenstro,Padre)
+esAcenstro(Acenstro,Persona):-esDecendienteDirecto(Acenstro,Persona),esHombre(Acenstro);esDecendienteDirecto(Acenstro,Persona),esMujer(Acenstro).
+esAcenstro(Acenstro,Persona):-esDecendienteDirecto(Acenstro,Persona),esHombre(Acenstro), esAcenstro(Acenstro,Padre);esDecendienteDirecto(Acenstro,Persona),esMujer(Acenstro), esAcenstro(Acenstro,Padre).
