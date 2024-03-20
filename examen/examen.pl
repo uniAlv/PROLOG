@@ -95,7 +95,10 @@ esDirecto(escritorio,computadoras).
 
 esDirecto("Dell",computadoras).
 esDirecto("HP",computadoras).
-esDirecto("Marca Patito",computadoras).
+
+esDirecto("Dell",escritorio).
+esDirecto("HP",escritorio).
+esDirecto("Marca Patito",escritorio).
 
 esDirecto("Omen 560","Dell").
 esDirecto("Pavillon 15a","HP").
@@ -121,9 +124,21 @@ esCliente(maria).
 esCliente(juana).
 esCliente(jeremias).
 
+% Definición de productos
+producto(X) :-
+    esDirecto(_,X).
 
-%Que cosas son Productos
-sonProducto(Producto, Productos):-esDirecto(Producto,Productos).
-sonCategorias(Categorias, Productos):-esDirecto(Categorias,Productos).
+% Definición de clientes
+cliente(X) :-
+    esCliente(X).
 
-productoColor(Producto, Color)
+% Definición de categorías
+categoria(X) :-
+    esDirecto(X).
+
+% Reglas recursivas
+esDirectoRecursivo(X, Y) :-
+    esDirecto(X, Y).
+esDirectoRecursivo(X, Y) :-
+    esDirecto(X, Z),
+    esDirectoRecursivo(Z, Y).
