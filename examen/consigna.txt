@@ -1,0 +1,34 @@
+Ejercicio
+
+Tomando como base la siguiente imagen que representa una tienda y sus clientes.
+
+Escribe el código PROLOG para que el sistema pueda responder una serie de preguntas y recomendar ciertos productos a los clientes:
+
+
+
+Toma en cuenta las siguientes reglas para el código:
+
+1. No se pueden utilizar hechos para definir toda la base de conocimiento, deben existir múltiples reglas que definan la información
+
+2.- Deben existir al menos 3 reglas recursivas en el código
+
+
+
+Responde a las siguientes preguntas:
+
+En tu respuesta debe estar escrita cada pregunta y debajo de ella la respuesta que da PROLOG; conjuntamente con una captura de pantalla
+
+1. Que cosas son Productos
+
+2. Que cosas son Clientes
+
+3. Que cosas son Categorías
+
+4. Identifica todos los productos de los siguientes colores: negro, blanco, rojo, verde, plateado (Por cada color, debe haber una verificación independiente)
+
+5. Identifica todos los productos que son: buenos, malos, caros baratos (Por cada característica debe haber una verificación independiente)
+
+6. Identifica todos los productos según su categoría: electrodomésticos, entretetenimiento, computadoras, batirodas, lavadoras, parlantes, consolas, xbox, play station, laptop, Escritorio, Dell, HP, Marca Patito
+
+7. Por cada cliente, escribe código para que le recomiende productos según sus gustos, (cada línea representa un gusto distinto)
+
