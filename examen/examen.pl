@@ -124,4 +124,6 @@ esCliente(jeremias).
 
 %Que cosas son Productos
 sonProducto(Producto, Productos):-esDirecto(Producto,Productos).
-sonCategorias(Producto, Productos):-esDirecto(Producto,Productos).
+sonCategorias(Categorias, Productos):-esDirecto(Categorias,Productos).
+
+productoColor(Producto, Color)
