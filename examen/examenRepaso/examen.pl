@@ -12,8 +12,8 @@ esCategoria(batidora).
 esCategoria(lavadora).
 esCategoria(parlantes).
 
-esCategoriaProducto(electrodomestico).
-esCategoriaProducto(entretenimiento).
+esCategoria(electrodomestico).
+esCategoria(entretenimiento).
 
 esCliente(maria).
 
@@ -31,5 +31,32 @@ estaCategoria("Samsung L200",lavadora).
 estaCategoria("Bose",parlantes).
 estaCategoria("LG",parlantes).
 
-productoDentroCategoria(Producto, Categoria):- esCategoria(Categoria),esProducto(Producto), estaCategoria(Producto,Categoria).
-productoDentroCategoria(Producto, Categoria):- esCategoriaProducto(Categoria,ProductoCategoria),productoDentroCategoria(Producto,Categoria).
+tieneCaracteristica("LG-510",blanco).
+tieneCaracteristica("LG-510",barato).
+tieneCaracteristica("LG-510",bueno).
+
+tieneCaracteristica("Samsung B125",negro).
+tieneCaracteristica("Samsung B125",caro).
+tieneCaracteristica("Samsung B125",malo).
+
+tieneCaracteristica("LG Batimix",rojo).
+tieneCaracteristica("LG Batimix",barato).
+tieneCaracteristica("LG Batimix",malo).
+
+tieneCaracteristica("Samsung L200",negro).
+tieneCaracteristica("Samsung L200",caro).
+tieneCaracteristica("Samsung L200",bueno).
+
+tieneCaracteristica("Bose",blanco).
+tieneCaracteristica("Bose",caro).
+tieneCaracteristica("Bose",negro).
+
+tieneCaracteristica("LG",rojo).
+tieneCaracteristica("LG",barato).
+tieneCaracteristica("LG",malo).
+
+% reglas
+productoDentroCategoria(Producto, Categoria):- esCategoria(Categoria),esProducto(Producto), estaCategoria(Producto, Categoria); esCategoria(Categoria),esCategoria(Producto), estaCategoria(Producto, Categoria).
+productoDentroCategoria(Producto, Categoria):- estaCategoria(SubCategoria, Categoria), estaCategoria(SubCategoria, Categoria).
+
+tieneCaracteristica(Producto):-esProducto(Producto),tieneCaracteristica(Producto,verde),productoDentroCategoria(Producto,producto).
