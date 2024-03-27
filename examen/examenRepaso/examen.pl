@@ -12,8 +12,8 @@ esCategoria(batidora).
 esCategoria(lavadora).
 esCategoria(parlantes).
 
-esCategoria(electrodomestico).
-esCategoria(entretenimiento).
+esCategoriaProducto(electrodomestico).
+esCategoriaProducto(entretenimiento).
 
 esCliente(maria).
 
@@ -31,3 +31,5 @@ estaCategoria("Samsung L200",lavadora).
 estaCategoria("Bose",parlantes).
 estaCategoria("LG",parlantes).
 
+productoDentroCategoria(Producto, Categoria):- esCategoria(Categoria),esProducto(Producto), estaCategoria(Producto,Categoria).
+productoDentroCategoria(Producto, Categoria):- esCategoriaProducto(Categoria,ProductoCategoria),productoDentroCategoria(Producto,Categoria).
